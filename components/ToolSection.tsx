@@ -2,6 +2,8 @@ import Image from "next/image"
 import pathIcon from "../assets/path.svg"
 import linkedin from "../assets/linkedin.svg"
 import { ToolCard } from "./ToolCard"
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
+import { SubscribeButton } from "./SubscribeButton"
 
 const toolsData = [
     {
@@ -46,9 +48,7 @@ export const ToolsSection = () => {
                     <p className="text-sm text-gray-400">Join the club and explore all the free tools...</p>
                 </div>
                 <div className="">
-                    <button className="px-12 py-2 bg-pink-400 text-white rounded-md">
-                        Subscribe
-                    </button>
+                    <SubscribeButton />
                 </div>
             </div>
         </div>
