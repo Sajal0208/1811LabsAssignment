@@ -1,23 +1,17 @@
-import Image from "next/image";
 import Logo from "./Logo";
-import avatar from "../assets/user.svg";
+import { LoginButton } from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
-const LoginButton = () => {
+export default function Header({ user }: {
+  user: any
+}) {
   return (
-    <button style={{
-      borderWidth: 1,
-    }} className="flex flex-row items-center gap-x-2 border-solid border-gray-300 rounded-lg p-1 font-medium">
-      <Image src={avatar} alt="avatar" />
-      <span>Log in</span>
-    </button>
-  )
-}
-
-export default function Header() {
-  return (
-    <div className="flex flex-row justify-between w-full px-24 py-12">
+    <div className="flex flex-row justify-between w-full px-20 py-12">
       <Logo />
-      <LoginButton />
+      {
+        user !== null ? <LogoutButton /> :
+          <LoginButton />}
     </div>
   );
 }
+

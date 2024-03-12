@@ -5,23 +5,27 @@ import { ToolCard } from "./ToolCard"
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
 import { SubscribeButton } from "./SubscribeButton"
 
-const toolsData = [
+export const toolsData = [
     {
         title: "Video Idea Generator",
         description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
         imageText: '💡',
+        path: 'tools/video-idea-generator'
     }, {
         title: "Free Audiogram Generator",
         description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
         imageText: '🖼️',
+        path: 'tools/audiogram-generator'
     }, {
         title: "YouTube video to SEO Blog Generator",
         description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
         imageText: '🗒️',
+        path: 'tools/youtube-video-to-seo-blog-generator'
     }, {
         title: "YouTube video to LinkedIn Post Generator",
         description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
         imageText: linkedin,
+        path: 'tools/youtube-video-to-linkedin-post-generator'
     }
 ]
 
