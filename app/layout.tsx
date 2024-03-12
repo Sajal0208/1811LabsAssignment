@@ -2,6 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import { cn } from "@/lib/utils";
 config.autoAddCss = false
 
 const defaultUrl = process.env.VERCEL_URL
@@ -20,7 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="bg-white text-black text-foreground">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          "bg-white text-black text-foreground"
+        )}
+      >
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>
