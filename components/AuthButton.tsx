@@ -3,7 +3,7 @@ import Image from "next/image";
 import avatar from "../assets/user.svg";
 import { useRouter } from "next/navigation";
 
-export const LoginButton = () => {
+export const AuthButton = () => {
     const router = useRouter()
     return (
         <button style={{

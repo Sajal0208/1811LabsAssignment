@@ -1,10 +1,9 @@
-"use client"
 import Header from '@/components/Header';
 import { Results } from '@/components/Result';
 import { SideBar } from '@/components/Sidebar';
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation';
 
-export default function ResultsPage({ params }: {
+export default async function ResultsPage({ params }: {
     params: {
         slug: string;
     }

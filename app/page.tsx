@@ -18,7 +18,7 @@ export default async function Index() {
 
   return (
     <div className="flex-1 w-full flex flex-col gap-x-20 mt-4 items-center">
-      <Header user={user} />
+      <Header />
       <div className="flex flex-col items-center gap-y-16 mb-10">
         <MainBody />
         <ToolsSection />
