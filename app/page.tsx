@@ -6,33 +6,23 @@ import starBadge from "../assets/star.svg"
 import heartBadge from "../assets/heart.svg"
 import plusoneBadge from "../assets/plusone.svg"
 import thumbsupBadge from "../assets/thumbsup.svg"
-import pathIcon from "../assets/path.svg"
-import linkedin from "../assets/linkedin.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
+import { ToolsSection } from "@/components/ToolSection";
+import { Footer } from "@/components/Footer";
 
 
 export default async function Index() {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center">
+    <div className="flex-1 w-full flex flex-col gap-x-20 mt-4 items-center">
       <Header />
-      <div className="flex flex-col items-center gap-y-16">
+      <div className="flex flex-col items-center gap-y-16 mb-10">
         <MainBody />
         <ToolsSection />
-      </div>
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
-      <div className="flex flex-col gap-8 items-center">
-
-      </div>
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
-      <div className="flex flex-col gap-8 items-center">
-        <h2 className="text-2xl font-bold">Experiments</h2>
-        <p className="text-lg text-center">
-          A collection of experiments and projects by 1811Labs.
-        </p>
+        <Footer />
       </div>
     </div>
   );
@@ -78,74 +68,3 @@ const MainBody = () => {
     </div>
   )
 }
-
-const ToolCard = ({ tool }: {
-  tool: {
-    title: string,
-    description: string,
-    imageText: any
-  },
-}) => {
-  return (
-    <div className={'hover:border-gray-300 cursor-pointer rounded-lg max-w-[600px] flex flex-col gap-y-2 p-4 border border-solid border-gray-100'}>
-      <span className="w-[45px] p-2 rounded-lg border border-solid border-gray-100 items-center flex flex-row justify-center">
-        {typeof tool.imageText === 'string' ? tool.imageText : <Image src={tool.imageText} alt="path" />}
-      </span>
-      <h2 className="text-xl font-semibold">{tool.title}</h2>
-      <p>{tool.description}</p>
-    </div>
-  )
-}
-
-const ToolsSection = () => {
-  return (
-    <div className="relative flex flex-col gap-y-4 items-center w-full">
-      <p className="text-pink-500">All of our tools</p>
-      <h1 className="text-2xl">
-        Click on any tool below and explore
-      </h1>
-      <Image src={pathIcon} alt="path" />
-      <div className={"grid grid-cols-2 gap-4"}>
-        {toolsData.map((tool, index) => {
-          return (
-            <ToolCard key={index} tool={tool} />
-          )
-        })}
-      </div>
-      <div style={{
-        backgroundColor: '#FFFAFB'
-      }} className="p-10 flex flex-row items-center justify-between  border border-solid border-gray-100 rounded-lg mt-10 w-full">
-        <div className="flex flex-col max-w-[300px] gap-y-2">
-          <p className="text-2xl font-semibold">Want to know more about the tools?</p>
-          <p className="text-sm text-gray-400">Join the club and explore all the free tools...</p>
-        </div>
-        <div className="">
-          <button className="px-12 py-2 bg-pink-400 text-white rounded-md">
-            Subscribe
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const toolsData = [
-  {
-    title: "Video Idea Generator",
-    description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
-    imageText: '💡',
-  }, {
-    title: "Free Audiogram Generator",
-    description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
-    imageText: '🖼️',
-  }, {
-    title: "YouTube video to SEO Blog Generator",
-    description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
-    imageText: '🗒️',
-  }, {
-    title: "YouTube video to LinkedIn Post Generator",
-    description: "Generate 10 unique ideas for your next viral video. Forget the creative block",
-    imageText: linkedin,
-  }
-]
-
