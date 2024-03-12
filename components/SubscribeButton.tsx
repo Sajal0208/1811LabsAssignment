@@ -2,11 +2,13 @@
 import { useState } from "react"
 import Logo from "./Logo"
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
-import { Input } from "./ui/input"
-import { Button } from "./ui/button"
 
 export const SubscribeButton = () => {
     const [email, setEmail] = useState("")
+
+    const onSubscribe = () => {
+        console.log("Subscribed with email", email)
+    }
 
     return (
         <Dialog>
@@ -29,6 +31,5 @@ export const SubscribeButton = () => {
                 </div>
             </DialogContent>
         </Dialog>
-
     )
 }
