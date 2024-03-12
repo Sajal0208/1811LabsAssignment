@@ -16,6 +16,7 @@ import { Footer } from "@/components/Footer";
 
 
 export default async function Index() {
+
   return (
     <div className="flex-1 w-full flex flex-col gap-x-20 mt-4 items-center">
       <Header />

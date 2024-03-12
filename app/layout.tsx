@@ -3,6 +3,7 @@ import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner"
 config.autoAddCss = false
 
 const defaultUrl = process.env.VERCEL_URL
@@ -30,6 +31,8 @@ export default function RootLayout({
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>
+        <Toaster />
+
       </body>
     </html>
   );
